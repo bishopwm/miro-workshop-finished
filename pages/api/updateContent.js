@@ -6,21 +6,7 @@ export default function handler(req, res) {
 
   const item_id = body.item_id;
   const content = body.content;
-  let item_type;
-
-  switch (body.item_type) {
-    case "shape":
-      item_type = "shapes";
-      break;
-    case "sticky_note":
-      item_type = "sticky_notes";
-      break;
-    case "text":
-      item_type = "texts";
-      break;
-    default:
-      item_type = "texts";
-  }
+  const item_type = body.item_type
 
   const headers = {
     Accept: "application/json",
@@ -30,7 +16,7 @@ export default function handler(req, res) {
 
   axios
     .patch(
-      `https://api.miro.com/v2/boards/${board_id}/${item_type}/${item_id}`,
+      `https://api.miro.com/v2/boards/${board_id}/${item_type}s/${item_id}`,
       {
         data: { content: content },
       },
