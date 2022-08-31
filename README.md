@@ -1,4 +1,4 @@
-# Miro Demo: We are Developers '22
+# Miro Workshop: React 18 + Server Components
 
 This sample app demonstrates the use of the Miro REST API and OAuth authorization. This app is based on the Next.js 12 React Server Components Demo app and includes both react server and react client components. We’ve created our own project based on this, and added the Miro OAuth flow to be included in some boilerplate functionality.
 
