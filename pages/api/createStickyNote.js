@@ -1,5 +1,4 @@
 import axios from "axios";
-import { board_id } from "../../constants";
 
 export default function handler(req, res) {
   const headers = {
@@ -19,7 +18,7 @@ export default function handler(req, res) {
   };
 
   axios
-    .post(`https://api.miro.com/v2/boards/${board_id}/sticky_notes`, data, {
+    .post(`https://api.miro.com/v2/boards/${process.env.boardId}/sticky_notes`, data, {
       headers: headers,
     })
     .then(function (response) {

@@ -1,5 +1,4 @@
 import axios from "axios";
-import { board_id } from "../../constants";
 
 export default function handler(req, res) {
   const body = JSON.parse(req.body);
@@ -16,7 +15,7 @@ export default function handler(req, res) {
 
   axios
     .patch(
-      `https://api.miro.com/v2/boards/${board_id}/${item_type}s/${item_id}`,
+      `https://api.miro.com/v2/boards/${process.env.boardId}/${item_type}s/${item_id}`,
       {
         data: { content: content },
       },
