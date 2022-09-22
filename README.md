@@ -45,8 +45,8 @@ Next, we can start working directly with this sample app:
 clientID={YOUR_CLIENT_ID)
 clientSecret={YOUR_CLIENT_SECRET}
 redirectURL=http://localhost:3000/api/redirect/
+boardId={YOUR_BOARD_ID}
 ```
-5. Navigate to `constants.js` and add the `boardId` of the Miro Board you'd like to leverage/modify
 5. Run `yarn dev` to start the local server
 
 Once your server is up and running, navigate to `http://localhost:3000/` in your browser. If the project is running successfully, you should see a 'Sign in' button in the UI.
